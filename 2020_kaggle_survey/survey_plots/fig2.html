@@ -7,11 +7,11 @@
 
 </head>
 <body>
-    <div id="fbb2229c15b34a9b8447541513e79811" class="chart-container" style="width:900px; height:500px;"></div>
+    <div id="78d77c4fcbc24e5c8579d74b3b588102" class="chart-container" style="width:900px; height:500px;"></div>
     <script>
-        var chart_fbb2229c15b34a9b8447541513e79811 = echarts.init(
-            document.getElementById('fbb2229c15b34a9b8447541513e79811'), 'white', {renderer: 'canvas'});
-        var option_fbb2229c15b34a9b8447541513e79811 = {
+        var chart_78d77c4fcbc24e5c8579d74b3b588102 = echarts.init(
+            document.getElementById('78d77c4fcbc24e5c8579d74b3b588102'), 'white', {renderer: 'canvas'});
+        var option_78d77c4fcbc24e5c8579d74b3b588102 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -72,17 +72,82 @@
                 "position": "top",
                 "margin": 8
             }
+        },
+        {
+            "type": "pie",
+            "name": "percent responses",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "Master",
+                    "value": 41.0
+                },
+                {
+                    "name": "Bachelor",
+                    "value": 36.0
+                },
+                {
+                    "name": "Higher than Master",
+                    "value": 16.0
+                },
+                {
+                    "name": "Lower than Bachelor",
+                    "value": 7.0
+                }
+            ],
+            "radius": [
+                "10%",
+                "20%"
+            ],
+            "center": [
+                "75%",
+                "25%"
+            ],
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "formatter": "{b}:{c}%"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b}:{c}%",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
         }
     ],
     "legend": [
         {
             "data": [
-                ""
+                "",
+                "Master",
+                "Bachelor",
+                "Higher than Master",
+                "Lower than Bachelor"
             ],
             "selected": {
                 "": true
             },
-            "show": true,
+            "show": false,
             "padding": 5,
             "itemGap": 10,
             "itemWidth": 25,
@@ -168,7 +233,7 @@
         }
     ]
 };
-        chart_fbb2229c15b34a9b8447541513e79811.setOption(option_fbb2229c15b34a9b8447541513e79811);
+        chart_78d77c4fcbc24e5c8579d74b3b588102.setOption(option_78d77c4fcbc24e5c8579d74b3b588102);
     </script>
 </body>
 </html>

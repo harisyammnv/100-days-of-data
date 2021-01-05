@@ -7,11 +7,11 @@
 
 </head>
 <body>
-    <div id="c895bbd2f9074d2296a3604747f9e4e3" class="chart-container" style="width:900px; height:500px;"></div>
+    <div id="a540bc879a7c4d83bcae8dbb4d34f137" class="chart-container" style="width:600px; height:500px;"></div>
     <script>
-        var chart_c895bbd2f9074d2296a3604747f9e4e3 = echarts.init(
-            document.getElementById('c895bbd2f9074d2296a3604747f9e4e3'), 'white', {renderer: 'canvas'});
-        var option_c895bbd2f9074d2296a3604747f9e4e3 = {
+        var chart_a540bc879a7c4d83bcae8dbb4d34f137 = echarts.init(
+            document.getElementById('a540bc879a7c4d83bcae8dbb4d34f137'), 'white', {renderer: 'canvas'});
+        var option_a540bc879a7c4d83bcae8dbb4d34f137 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -49,23 +49,22 @@
     "series": [
         {
             "type": "bar",
-            "name": "Men",
+            "name": "num responses",
             "legendHoverLink": true,
             "data": [
-                2611,
-                2838,
-                3128,
-                2246,
-                1581,
-                1153,
-                840,
-                605,
-                353,
-                362,
-                72
+                3469,
+                3786,
+                4011,
+                2811,
+                1991,
+                1397,
+                988,
+                698,
+                411,
+                398,
+                76
             ],
             "showBackground": false,
-            "stack": "stack1",
             "barMinHeight": 0,
             "barCategoryGap": "20%",
             "barGap": "30%",
@@ -81,46 +80,23 @@
                 "position": "inside",
                 "margin": 8
             },
-            "rippleEffect": {
-                "show": true,
-                "brushType": "stroke",
-                "scale": 2.5,
-                "period": 4
-            }
-        },
-        {
-            "type": "bar",
-            "name": "Women",
-            "legendHoverLink": true,
-            "data": [
-                796,
-                886,
-                819,
-                504,
-                368,
-                222,
-                126,
-                81,
-                45,
-                29,
-                2
-            ],
-            "showBackground": false,
-            "stack": "stack1",
-            "barMinHeight": 0,
-            "barCategoryGap": "20%",
-            "barGap": "30%",
-            "large": false,
-            "largeThreshold": 400,
-            "seriesLayoutBy": "column",
-            "datasetIndex": 0,
-            "clip": true,
-            "zlevel": 0,
-            "z": 2,
-            "label": {
-                "show": true,
-                "position": "inside",
-                "margin": 8
+            "markPoint": {
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                },
+                "data": [
+                    {
+                        "name": "Maximum no. of responses",
+                        "type": "max"
+                    },
+                    {
+                        "name": "Minimum no. of responses",
+                        "type": "min"
+                    }
+                ]
             },
             "rippleEffect": {
                 "show": true,
@@ -135,31 +111,63 @@
             "clockwise": true,
             "data": [
                 {
-                    "name": "Men",
-                    "value": 78.8
+                    "name": "18-21",
+                    "value": 17.0
                 },
                 {
-                    "name": "Women",
-                    "value": 19.36
+                    "name": "22-24",
+                    "value": 19.0
                 },
                 {
-                    "name": "ETC",
-                    "value": 1.84
+                    "name": "25-29",
+                    "value": 20.0
+                },
+                {
+                    "name": "30-34",
+                    "value": 14.0
+                },
+                {
+                    "name": "35-39",
+                    "value": 10.0
+                },
+                {
+                    "name": "40-44",
+                    "value": 7.0
+                },
+                {
+                    "name": "45-49",
+                    "value": 5.0
+                },
+                {
+                    "name": "50-54",
+                    "value": 3.0
+                },
+                {
+                    "name": "55-59",
+                    "value": 2.0
+                },
+                {
+                    "name": "60-69",
+                    "value": 2.0
+                },
+                {
+                    "name": "70+",
+                    "value": 0.0
                 }
             ],
             "radius": [
-                "30%",
-                "40%"
+                "10%",
+                "20%"
             ],
             "center": [
-                "75%",
+                "65%",
                 "35%"
             ],
             "label": {
                 "show": true,
                 "position": "top",
                 "margin": 8,
-                "formatter": "{b}:{c}%"
+                "formatter": "{b}: {c}%"
             },
             "tooltip": {
                 "show": true,
@@ -172,7 +180,7 @@
                 "alwaysShowContent": false,
                 "showDelay": 0,
                 "hideDelay": 100,
-                "formatter": "{b}:{c}%",
+                "formatter": "{b}: {c}%",
                 "textStyle": {
                     "fontSize": 14
                 },
@@ -190,17 +198,23 @@
     "legend": [
         {
             "data": [
-                "Men",
-                "Women",
-                "Men",
-                "Women",
-                "ETC"
+                "num responses",
+                "18-21",
+                "22-24",
+                "25-29",
+                "30-34",
+                "35-39",
+                "40-44",
+                "45-49",
+                "50-54",
+                "55-59",
+                "60-69",
+                "70+"
             ],
             "selected": {
-                "Men": true,
-                "Women": true
+                "num responses": true
             },
-            "show": true,
+            "show": false,
             "padding": 5,
             "itemGap": 10,
             "itemWidth": 25,
@@ -225,30 +239,6 @@
         "padding": 5
     },
     "xAxis": [
-        {
-            "name": "# responses",
-            "show": true,
-            "scale": false,
-            "nameLocation": "end",
-            "nameGap": 15,
-            "gridIndex": 0,
-            "inverse": false,
-            "offset": 0,
-            "splitNumber": 5,
-            "minInterval": 0,
-            "splitLine": {
-                "show": false,
-                "lineStyle": {
-                    "show": true,
-                    "width": 1,
-                    "opacity": 1,
-                    "curveness": 0,
-                    "type": "solid"
-                }
-            }
-        }
-    ],
-    "yAxis": [
         {
             "name": "Age-Group",
             "show": true,
@@ -285,15 +275,39 @@
             ]
         }
     ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
     "title": [
         {
-            "text": "Number of respondents based on Sex",
+            "text": "Number of respondents based on Age Group",
+            "subtext": "2020 Kaggle Survey",
             "padding": 5,
             "itemGap": 10
         }
     ]
 };
-        chart_c895bbd2f9074d2296a3604747f9e4e3.setOption(option_c895bbd2f9074d2296a3604747f9e4e3);
+        chart_a540bc879a7c4d83bcae8dbb4d34f137.setOption(option_a540bc879a7c4d83bcae8dbb4d34f137);
     </script>
 </body>
 </html>
